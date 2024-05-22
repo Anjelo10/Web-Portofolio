@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: none;
+  text-decoration: none;
+}
+
+:root {
+  --Primary: #fcdb2a;
+  --Secondary: #120134;
+  --bg: #0c0122;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg);
+  position: fixed;
+  padding: 0.7rem 5rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--Primary);
+}
+
+.navbar .navbar-logo:hover {
+  color: #fff;
+}
+
+.navbar .navbar-nav a {
+  align-items: center;
+  padding: 0 1.5rem;
+  color: #fff;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--Primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--Primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra {
+  position: absolute;
+  color: var(--Primary);
+  right: 10%;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.hero {
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(img/HeroBg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .content {
+  margin: 1rem 7%;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero .content h1 {
+  margin: 0;
+  font-size: 5rem;
+  line-height: 4rem;
+}
+
+.hero .content h1 span {
+  color: var(--Primary);
+}
+
+.hero .content p {
+  margin: 1.2rem 0;
+}
+
+.hero .content .cta {
+  background-color: var(--Primary);
+  display: inline-block;
+  padding: 0.7rem;
+  border-radius: 0.6rem;
+  box-shadow: 2px 2px 2px rgba(1, 1, 1, 0.6);
+}
+
+.about {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "about about"
+    "image paragraf"
+    "image paragraf"
+    "image interest";
+  margin: 2rem;
+  /* background-color: var(--Primary); */
+  padding: 3rem 8% 0 8%;
+}
+
+.judul {
+  grid-area: about;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--Primary);
+}
+.image {
+  grid-area: image;
+  background-color: #fcdb2a;
+  min-height: 350px;
+  min-width: 300px;
+  max-height: 500px;
+  background-image: url(img/About.jpg);
+  background-position: bottom;
+  background-size: cover;
+  border-radius: 0.2rem;
+  box-shadow: 2px 2px 2px rgba(1, 1, 1, 0.6);
+  background-color: #fff;
+}
+
+.paragraf {
+  grid-area: paragraf;
+  min-height: 300px;
+  font-size: 1.1rem;
+  line-height: 1.9rem;
+  text-align: justify;
+}
+.paragraf h3 span {
+  color: var(--Primary);
+}
+
+.interest {
+  grid-area: interest;
+}
+.interest h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--Primary);
+}
+
+.interest .icon {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.interest .icon .icn {
+  display: block;
+  margin: 0 1rem 0 0;
+  text-align: center;
+}
+
+.service {
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px;
+  grid-template-rows: 150px 250px;
+  grid-template-areas:
+    "title title title title"
+    "card-1 card-2 card-3 card-4";
+  gap: 4%;
+  justify-content: center;
+}
+
+.judul-card {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--Primary);
+  align-items: end;
+}
+
+.card-1 {
+  grid-area: card-1;
+  padding: 2.5rem 10%;
+  background-image: url(img/card-bg.png);
+  border-radius: 0.3rem;
+}
+
+.card-2 {
+  grid-area: card-2;
+  padding: 2.5rem 10%;
+  background-image: url(img/card-bg.png);
+  border-radius: 0.3rem;
+}
+
+.card-3 {
+  grid-area: card-3;
+  padding: 2.5rem 10%;
+  background-image: url(img/card-bg.png);
+  border-radius: 0.3rem;
+}
+.card-4 {
+  grid-area: card-4;
+  padding: 2.5rem 10%;
+  background-image: url(img/card-bg.png);
+  border-radius: 0.3rem;
+}
+
+.service span {
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.service h2 {
+  font-size: 1.1rem;
+  text-align: start;
+  margin: 10px 0 0 0;
+}
+
+.service p {
+  font-size: 0.7rem;
+  text-align: start;
+}
+
+.service a {
+  background-color: var(--Primary);
+  display: inline-block;
+  margin: 1rem 0;
+  text-align: start;
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.2rem;
+  box-shadow: 2px 2px 2px rgba(1, 1, 1, 0.6);
+  font-size: 0.9rem;
+  transition: 0.3s;
+  color: #000;
+}
+
+.service a:hover {
+  background-color: #b59b08;
+  color: #fff;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 150px 300px 300px;
+  grid-template-areas:
+    "judul judul"
+    "img-1 img-2"
+    "img-3 img-4";
+  margin: 9rem 15rem;
+  gap: 2rem;
+  color: #000;
+}
+.judul-port {
+  grid-area: judul;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--Primary);
+  text-align: center;
+  align-content: end;
+}
+
+.img1 {
+  grid-area: img-1;
+  background-image: url(img/port-img.png);
+  align-content: end;
+  padding: 1.5rem;
+}
+/* .img1 h1 {
+  font-size: 2rem;
+} */
+.img2 {
+  grid-area: img-2;
+  background-image: url(img/port-img.png);
+  align-content: end;
+  padding: 1.5rem;
+}
+.img3 {
+  grid-area: img-3;
+  background-image: url(img/port-img.png);
+  align-content: end;
+  padding: 1.5rem;
+}
+.img4 {
+  grid-area: img-4;
+  background-image: url(img/port-img.png);
+  align-content: end;
+  padding: 1.5rem;
+}
+
+.img1 h1,
+.img2 h1,
+.img3 h1,
+.img4 h1 {
+  font-size: 2rem;
+}
+
+/* Media Queries */
+
+/* Desktop */
+@media (max-width: 1200px) {
+  html {
+    font-size: 95%;
+  }
+
+  .navbar {
+    padding: 0.7rem 3rem;
+  }
+  .portfolio {
+    margin: 1rem 2rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 85%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+    color: var(--Primary);
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--Secondary);
+    width: 15rem;
+    height: 100vh;
+    transition: 0.3s;
+    padding: 2rem;
+  }
+
+  .navbar .navbar-nav a {
+    display: block;
+    font-size: 1.5rem;
+    margin: 1rem 1rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .hero {
+    background-image: url(img/Bg.png);
+  }
+  .hero .content {
+    background-size: cover;
+  }
+
+  .about {
+    display: block;
+    justify-content: center;
+    grid-template-areas:
+      "about"
+      "image"
+      "paragraf"
+      "interest";
+    gap: 5rem;
+  }
+  .image {
+    width: 100%;
+    background-position: center;
+    margin-bottom: 2rem;
+  }
+  .paragraf {
+    margin-bottom: 2rem;
+  }
+
+  .service {
+    display: block;
+    justify-content: center;
+    grid-template-areas:
+      "title"
+      "card-1"
+      "card-2"
+      "card-3"
+      "card-4";
+    gap: 2rem;
+  }
+
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4 {
+    margin: 2rem;
+  }
+
+  .portfolio {
+    margin: 1rem 2rem;
+  }
+}
+
+/* Handphone */
+@media (max-width: 480px) {
+  html {
+    font-size: 75%;
+  }
+}
