@@ -115,6 +115,12 @@ body {
   padding: 0.7rem;
   border-radius: 0.6rem;
   box-shadow: 2px 2px 2px rgba(1, 1, 1, 0.6);
+  transition: 0.3s;
+}
+
+.hero .content .cta:hover {
+  background-color: #b59b08;
+  color: #fff;
 }
 
 .about {
@@ -128,7 +134,7 @@ body {
     "image interest";
   margin: 2rem;
   /* background-color: var(--Primary); */
-  padding: 3rem 8% 0 8%;
+  padding: 3rem 7% 0 7%;
 }
 
 .judul {
@@ -188,12 +194,12 @@ body {
 
 .service {
   display: grid;
-  grid-template-columns: 250px 250px 250px 250px;
-  grid-template-rows: 150px 250px;
+  grid-template-columns: 280px 280px 280px 280px;
+  grid-template-rows: 150px 285px;
   grid-template-areas:
     "title title title title"
     "card-1 card-2 card-3 card-4";
-  gap: 4%;
+  gap: 2%;
   justify-content: center;
 }
 
@@ -213,6 +219,7 @@ body {
   padding: 2.5rem 10%;
   background-image: url(img/card-bg.png);
   border-radius: 0.3rem;
+  box-shadow: 2px 2px 4px rgba(1, 1, 1, 0.6);
 }
 
 .card-2 {
@@ -220,6 +227,7 @@ body {
   padding: 2.5rem 10%;
   background-image: url(img/card-bg.png);
   border-radius: 0.3rem;
+  box-shadow: 2px 2px 4px rgba(1, 1, 1, 0.6);
 }
 
 .card-3 {
@@ -227,12 +235,14 @@ body {
   padding: 2.5rem 10%;
   background-image: url(img/card-bg.png);
   border-radius: 0.3rem;
+  box-shadow: 2px 2px 4px rgba(1, 1, 1, 0.6);
 }
 .card-4 {
   grid-area: card-4;
   padding: 2.5rem 10%;
   background-image: url(img/card-bg.png);
   border-radius: 0.3rem;
+  box-shadow: 2px 2px 4px rgba(1, 1, 1, 0.6);
 }
 
 .service span {
@@ -271,59 +281,58 @@ body {
 }
 
 .portfolio {
-  display: grid;
-  grid-template-columns: 2fr 2fr;
-  grid-template-rows: 150px 300px 300px;
-  grid-template-areas:
-    "judul judul"
-    "img-1 img-2"
-    "img-3 img-4";
-  margin: 9rem 15rem;
-  gap: 2rem;
-  color: #000;
+  text-align: center;
+  margin: 5rem 4rem 3rem 4rem;
 }
-.judul-port {
-  grid-area: judul;
+
+.portfolio .judul-port {
+  margin: 3rem 0 1rem 0;
+  align-items: center;
   font-size: 3rem;
   font-weight: 700;
   color: var(--Primary);
-  text-align: center;
-  align-content: end;
+}
+
+.content-port {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .img1 {
-  grid-area: img-1;
-  background-image: url(img/port-img.png);
-  align-content: end;
-  padding: 1.5rem;
-}
-/* .img1 h1 {
-  font-size: 2rem;
-} */
-.img2 {
-  grid-area: img-2;
-  background-image: url(img/port-img.png);
-  align-content: end;
-  padding: 1.5rem;
-}
-.img3 {
-  grid-area: img-3;
-  background-image: url(img/port-img.png);
-  align-content: end;
-  padding: 1.5rem;
-}
-.img4 {
-  grid-area: img-4;
-  background-image: url(img/port-img.png);
-  align-content: end;
-  padding: 1.5rem;
+  background-color: var(--Secondary);
+  overflow: hidden;
+  margin: 1rem;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(1, 1, 1, 0.6);
+  text-align: start;
 }
 
-.img1 h1,
-.img2 h1,
-.img3 h1,
-.img4 h1 {
-  font-size: 2rem;
+.img1 .content {
+  padding: 1.3rem 1rem 1rem 1rem;
+}
+.content h1 {
+  font-size: 1.2rem;
+}
+.content p {
+  font-size: 0.9rem;
+}
+
+.btn-port {
+  background-color: var(--Primary);
+  display: inline-block;
+  padding: 0.7rem;
+  border-radius: 0.6rem;
+  box-shadow: 2px 2px 2px rgba(1, 1, 1, 0.6);
+  margin-top: 3rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+.btn-port:hover {
+  background-color: #b59b08;
+  color: #fff;
 }
 
 /* Media Queries */
@@ -428,6 +437,9 @@ body {
 
   .portfolio {
     margin: 1rem 2rem;
+  }
+  .content-port .img1 img {
+    width: 100%;
   }
 }
 
