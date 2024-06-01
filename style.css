@@ -10,7 +10,7 @@
 }
 
 :root {
-  --Primary: #fcdb2a;
+  --Primary: #0073e6;
   --Secondary: #120134;
   --bg: #0c0122;
 }
@@ -119,7 +119,7 @@ body {
 }
 
 .hero .content .cta:hover {
-  background-color: #b59b08;
+  background-color: #07417b;
   color: #fff;
 }
 
@@ -149,7 +149,6 @@ body {
 }
 .image {
   grid-area: image;
-  background-color: #fcdb2a;
   min-height: 350px;
   min-width: 300px;
   max-height: 500px;
@@ -276,7 +275,7 @@ body {
 }
 
 .service a:hover {
-  background-color: #b59b08;
+  background-color: #07417b;
   color: #fff;
 }
 
@@ -285,7 +284,8 @@ body {
   margin: 5rem 4rem 3rem 4rem;
 }
 
-.portfolio .judul-port {
+.judul-port,
+.judul-contact {
   margin: 3rem 0 1rem 0;
   align-items: center;
   font-size: 3rem;
@@ -331,8 +331,81 @@ body {
 }
 
 .btn-port:hover {
-  background-color: #b59b08;
+  background-color: #07417b;
   color: #fff;
+}
+
+.contact {
+  margin: 7rem 0;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.judul-contact {
+  text-align: center;
+}
+
+.content-contact {
+  display: flex;
+  justify-content: center;
+  margin: 0 15%;
+}
+.content-contact ul {
+  list-style: none;
+}
+
+.sosmed,
+.form {
+  width: 50%;
+  padding: 1rem 5rem;
+}
+
+.sosmed {
+  background-color: var(--Primary);
+}
+
+.form {
+  background-color: #07417b;
+}
+.form .input-box {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0.6rem 0;
+}
+
+.form .input-box input,
+.form .pesan-box textarea {
+  width: 100%;
+  padding: 0.5rem;
+  height: 30px;
+  color: gray;
+  border-radius: 3px;
+}
+
+.form .pesan-box textarea {
+  height: 5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.pesan-box input {
+  display: flex;
+  height: 30rem;
+}
+
+.btn-sub {
+  background-color: var(--Primary);
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  border-radius: 0.6rem;
+  margin-top: 1rem;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Media Queries */
@@ -349,6 +422,9 @@ body {
   .portfolio {
     margin: 1rem 2rem;
   }
+  .content-contact {
+    margin: 0 5%;
+  }
 }
 
 /* Tablet */
@@ -360,6 +436,10 @@ body {
   #hamburger-menu {
     display: inline-block;
     color: var(--Primary);
+  }
+
+  #hamburger-menu:hover {
+    color: #fff;
   }
 
   .navbar .navbar-nav {
@@ -441,6 +521,17 @@ body {
   .content-port .img1 img {
     width: 100%;
   }
+
+  /* .content-contact {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .sosmed,
+  .form {
+    padding: 2rem;
+    width: 100%;
+  } */
 }
 
 /* Handphone */

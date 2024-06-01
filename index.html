@@ -10,6 +10,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -20,7 +22,7 @@
         <a href="#about">About</a>
         <a href="#service">Service</a>
         <a href="#portfolio">PortFolio</a>
-        <a href="#home">Contact</a>
+        <a href="#contact">Contact</a>
       </div>
       <div class="navbar-extra">
         <a href="#hamburger-menu" id="hamburger-menu">
@@ -88,6 +90,7 @@
       </div>
     </section>
 
+    <!-- Service -->
     <section class="service" id="service">
       <div class="judul-card">
         <h1 class="h1">What I Do</h1>
@@ -124,6 +127,7 @@
       </div>
     </section>
 
+    <!-- Portfolio -->
     <section class="portfolio" id="portfolio">
       <h2 class="judul-port">Portofolio</h2>
       <div class="content-port">
@@ -156,10 +160,54 @@
           </div>
         </div>
       </div>
-      <a class="btn-port" href="">Selengkapnya</a>
+      <a
+        class="btn-port"
+        href="https://drive.google.com/drive/folders/1BCH_e7Y5or73KpniypLDK0HRbZ7YbRsJ?usp=sharing"
+        >Selengkapnya</a
+      >
     </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <h2 class="judul-contact">Contact</h2>
+      <div class="content-contact">
+        <div class="sosmed">
+          <h2>Ikuti Kami di Sosial Media</h2>
+          <ul>
+            <li><i data-feather="facebook"></i><a href="">Facebook</a></li>
+            <li><i data-feather="instagram"></i><a href="#">Instagram</a></li>
+            <li><i data-feather="linkedin"></i><a href="#">Linkedin</a></li>
+            <li><i data-feather="whatsapp"></i><a href="#">Whatsapp</a></li>
+          </ul>
+        </div>
+        <div action="#" class="form">
+          <div class="input-box">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter Full Name" />
+          </div>
+          <div class="input-box">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter Full Name" />
+          </div>
+            <div class="pesan-box">
+              <label for="message">Pesan:</label>
+              <textarea id="message" name="message" rows="4" required placeholder="Pesan"></textarea>
+            </div>
+            <button type="submit" class="btn-sub">Kirim</button>
+            </div>
+            </div>
+        </div>
+      </div>
+          
+
+
 
     <!-- javascript -->
     <script src="script.js"></script>
+
+    <!-- Feather Icon -->
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
